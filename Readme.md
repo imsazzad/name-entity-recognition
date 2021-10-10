@@ -17,9 +17,8 @@ run the following command from project root
 `python app/train_ner.py -f lifebit-nlp-data/train.pkl -d app/model/`
 
 ## How to run evaluation
-Only after running training you can run the below command. 
-Otherwise, there will be no model in the model directory.
-Though I have saved my model in the 'best_model' directory.
+I have saved my local model in the 'best_model' directory and
+colab model google_colab_model directory
 
 run the following command from project root
 - -f for validation data file
@@ -28,6 +27,12 @@ run the following command from project root
 `python app/evaulate_ner_model.py -f lifebit-nlp-data/test.pkl -d app/best_model/`
 or 
 `python app/evaulate_ner_model.py -f lifebit-nlp-data/test.pkl -d app/google_colab_model/`
+
+if you want run ner from scratch and evaluation 
+1. `python app/train_ner.py -f lifebit-nlp-data/train.pkl -d app/model/`
+2. `python app/evaulate_ner_model.py -f lifebit-nlp-data/test.pkl -d app/model/`
+
+your current ner training model will be saved in 'app/model'.
 
 Folder Structure
 ============================
