@@ -120,7 +120,7 @@ if __name__ == '__main__':
     args = parse_args_and_load_vars()
     with open(args.filename, 'rb') as fp:
         training_data = pickle.load(fp)
-
+    print("length of training data", len(training_data))
     converted_data, all_labels = convert_to_spacy_format(training_data)
     logging.info("These are all levels")
     logging.info(all_labels)
