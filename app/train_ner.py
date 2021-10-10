@@ -129,4 +129,4 @@ if __name__ == '__main__':
     converted_data, all_labels = convert_to_spacy_format(training_data)
     logging.info("These are all levels")
     logging.info(all_labels)
-    main(data=converted_data, labels=all_labels, output_dir=args.directory, n_iter=1000, model="best_model/")
+    main(data=converted_data[0:3000], labels=all_labels, output_dir=args.directory, n_iter=1000, model=None)
