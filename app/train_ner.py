@@ -17,7 +17,7 @@ logging.basicConfig(level=logging.INFO)
 def load_or_create_model(model):
     if model is not None:
         nlp = spacy.load(model)  # load existing spacy model
-        logging.info("Loaded model +  model")
+        logging.info("Loaded model " + model)
     else:
         nlp = spacy.blank('en')  # create blank Language class
         logging.info("Created blank 'en' model")
