@@ -49,14 +49,14 @@
 1. took only 3000 sentences from training data to run NER training due to insufficient resources. 
 2. run only 1100 epochs
 3. starting loss - about 4000
-4. end loss - #TODO
+4. end loss - 1552.1476201684711  still running # TODO
 
 ## Training on Google Colab [ GPU]
 
 1. took full training data to run NER training. 
 2. run only 1000 epochs.
 3. starting loss - 642309.21634819
-4. end loss - 589102.0629441325 #TODO
+4. end loss - 589102.0629441325  still running  #TODO
 
 
 ## Issue faced
