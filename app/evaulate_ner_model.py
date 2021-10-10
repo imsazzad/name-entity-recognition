@@ -46,5 +46,5 @@ if __name__ == '__main__':
     print("Loading from", output_dir)
     ner_model = spacy.load(output_dir)
 
-    results = evaluate(ner_model, converted_data[0:20])
+    results = evaluate(ner_model, converted_data)
     print(results)

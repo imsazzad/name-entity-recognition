@@ -76,7 +76,7 @@ def parse_args_and_load_vars():
     return args
 
 
-def main(data, labels, output_dir, model=None, new_model_name='new_model', n_iter=1):
+def main(data, labels, output_dir, model=None, new_model_name='new_model', n_iter=10):
     """Setting up the pipeline and entity recognizer, and training the new entity."""
     nlp = load_or_create_model(model)
 
@@ -123,4 +123,4 @@ if __name__ == '__main__':
     converted_data, all_labels = convert_to_spacy_format(training_data)
     logging.info("These are all levels")
     logging.info(all_labels)
-    main(data=converted_data[0:2000], labels=all_labels, output_dir=args.directory)
+    main(data=converted_data, labels=all_labels, output_dir=args.directory,n_iter=1000)
