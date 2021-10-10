@@ -26,6 +26,8 @@ run the following command from project root
 - -d for from where to load the saved model
 - 
 `python app/evaulate_ner_model.py -f lifebit-nlp-data/test.pkl -d app/best_model/`
+or 
+`python app/evaulate_ner_model.py -f lifebit-nlp-data/test.pkl -d app/google_colab_model/`
 
 Folder Structure
 ============================
@@ -53,7 +55,8 @@ Folder Structure
     │   ├── train_ner.py                        # script to run custom training on the biomedical data using spacy
     │   ├── evaulate_ner_model.py               # script to test the performance on the unseen data
     │   ├── tuple_to_spacy_converter.py         # converts training data to spacy formatted training data
-    │   ├── best model                          # saved best model ( manual save)
+    │   ├── best_model                          # saved best model ( manual save)
+    │   ├── google_colab_model                  # model that trained on google colab
     │   └── model                               # saved model directory for future run
     └── ...
 
