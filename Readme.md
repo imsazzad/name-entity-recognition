@@ -1,5 +1,8 @@
 # Model used for training
-Here Spacy is used for training ner
+Here Spacy is used for training ner.
+
+Please Read **docs/Training Documentation.md** to get details about 
+ - ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+)  **Training, Issues, Next Steps** 
 
 ## Installation
 - setup [venv](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
@@ -37,6 +40,7 @@ Folder Structure
     ├── venv                    # python                  
     ├── .gitignore              # gitignore                  
     ├── requirments.txt         # all dependencies list                  
+    ├── Train_NER___lifebit.ipynb  # notebook created for google colab                
     └── README.md               # project documenation
 
 
