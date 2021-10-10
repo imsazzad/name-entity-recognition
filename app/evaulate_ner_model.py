@@ -36,7 +36,7 @@ if __name__ == '__main__':
         args.filename = "../lifebit-nlp-data/test.pkl"
 
     if not args.directory:
-        args.directory = "model/"
+        args.directory = "best_model/"
 
     with open(args.filename, 'rb') as fp:
         data = pickle.load(fp)
