@@ -16,9 +16,13 @@ run the following command from project root
 ## How to run evaluation
 Only after running training you can run the below command. 
 Otherwise, there will be no model in the model directory.
-Though I have saved my model in the directory.
+Though I have saved my model in the 'best_model' directory.
 
-`python app/evaulate_ner_model.py -f lifebit-nlp-data/test.pkl -d app/model/`
+run the following command from project root
+- -f for validation data file
+- -d for from where to load the saved model
+- 
+`python app/evaulate_ner_model.py -f lifebit-nlp-data/test.pkl -d app/best_model/`
 
 Folder Structure
 ============================
@@ -26,15 +30,28 @@ Folder Structure
 ### top-level directory layout
 
     .
-    ├── docs                    
-    ├── app                     
-    ├── test                    
-    ├── LICENSE
-    └── README.md
+    ├── app                     # all the source code to run NER, test the model and preprocessing 
+    ├── docs                    # Documentation details about model and training
+    ├── lifebit-nlp-data        # train and test data
+    ├── test                    # unit test of the preprocessing script
+    ├── venv                    # python                  
+    ├── .gitignore              # gitignore                  
+    ├── requirments.txt         # all dependencies list                  
+    └── README.md               # project documenation
 
 
 
 ### Source files
+    .
+    ├── ...
+    ├── app
+    │   ├── __init__.py
+    │   ├── train_ner.py                        # script to run custom training on the biomedical data using spacy
+    │   ├── evaulate_ner_model.py               # script to test the performance on the unseen data
+    │   ├── tuple_to_spacy_converter.py         # converts training data to spacy formatted training data
+    │   ├── best model                          # saved best model ( manual save)
+    │   └── model                               # saved model directory for future run
+    └── ...
 
 
 ### Tests files
@@ -45,7 +62,17 @@ Folder Structure
     │   └── test_tuple_to_spacy_converter.py                # Unit tests for data processing
     └── ...
 
-### Scripts
+### Data folder
+    .
+    ├── ...
+    ├── lifebit-nlp-data
+    │   ├── test.pkl                # test data file 
+    │   └── train.pkl               # training data file
+    └── ...
 
-...
-
+### Documentation files
+    .
+    ├── ...
+    ├── docs
+    │   ├── Training Documentation.md # Brief discussion about Training
+    └── ...
