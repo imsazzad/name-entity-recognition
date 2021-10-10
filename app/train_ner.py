@@ -6,6 +6,7 @@ import pickle
 import random
 from pathlib import Path
 import spacy
+spacy.prefer_gpu()
 from spacy.training import Example
 from spacy.util import minibatch, compounding
 from tuple_to_spacy_converter import convert_to_spacy_format
