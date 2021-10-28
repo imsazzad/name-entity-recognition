@@ -20,7 +20,7 @@
     - log different metric like accuracy, precision, recall to show the model performance 
 
 ## Software best practices
-1. Tried to write small methods
+1. Tried to write smaller methods
 2. Ran SonarLint and pylint to find code smells and solved the issues
 3. Tried to parameterize most of the dependencies
 4. Wrote reusable code [ data processing is used in both training and evaluation]
@@ -44,6 +44,12 @@
 7. used dropout as regularization
 8. monitored loss
 9. if loss is decreased, best model is saved on each iteration
+
+## Spacy Models
+- spaCy v2.0's Named Entity Recognition system features a sophisticated word embedding strategy using subword features and "Bloom" embeddings,
+- a deep convolutional neural network with residual connections, and a novel transition-based approach to named entity parsing. 
+- The system is designed to give a good balance of efficiency, accuracy and adaptability. 
+- https://github.com/explosion/spaCy/issues/881
 
 ## Training on My Desktop [ No GPU] :(
 1. took only 3000 sentences from training data to run NER training due to insufficient resources. 
