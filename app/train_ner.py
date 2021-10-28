@@ -93,6 +93,7 @@ def main(data, labels, output_dir, model=None, new_model_name='new_model', n_ite
 
     # Get names of other pipes to disable them during training to train only NER
     other_pipes = [pipe for pipe in nlp.pipe_names if pipe != 'ner']
+    print("Other pipe line components", other_pipes)
     prev_loss = float("inf")
     test_text = 'Positron emission tomography in a case of intracranial hemangiopericytoma .'
     with nlp.disable_pipes(*other_pipes):  # only train NER
